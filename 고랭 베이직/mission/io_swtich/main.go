@@ -11,18 +11,19 @@ func main() {
 		fmt.Println("Enter command: ")
 		fmt.Scanf("%s", &x)
 
-		if x == "exit" {
+		switch x {
+		case "exit":
 			fmt.Println("Exiting...")
-			break
-		} else if x == "hello" {
+			return
+		case "hello":
 			fmt.Println("Hello, world!")
-		} else if x == "even" {
+		case "even":
 			fmt.Println("Even numbers from 0 to 10:")
 			fmt.Println("0 2 4 6 8")
-		} else if x == "odd" {
+		case "odd":
 			fmt.Println("Odd numbers from 1 to 10:")
 			fmt.Println("1 3 5 7 9")
-		} else {
+		default:
 			fmt.Println("Unknown command")
 		}
 	}
